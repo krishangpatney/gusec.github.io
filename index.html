@@ -20,8 +20,18 @@
                 </ul>
             </div>
         </nav>
+
+<!-- Image Slideshow -->
+        <center><div class="slideshow">
+            <img class = "mySlides" src = 'media/GroupPhoto.png'>
+            <img class = "mySlides" src = 'media/GUSECBravo.jpg'>
+            <img class = "mySlides" src = 'media/GUSECAlpha.png'>
+            <br>
+           
+        </div></center>
+
         <div class = 'content'>
-            <center><a style=";font-size:60px;">About Us</a></center>
+            <center><a style =";font-size:60px;">About Us</a></center>
             <hr>
             <div class="boxed">
                 We are a student society at the University of Glasgow, teaching cyber security and trying<br>
@@ -29,6 +39,30 @@
                 of cyber security.
               </div>
         </div>
+
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+
+
+
+
+        <script>
+            var slideIndex = 0;
+            carousel();
+
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"; 
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1} 
+            x[slideIndex-1].style.display = "block"; 
+            setTimeout(carousel, 6000); // Change image every 6 seconds
+            }
+        </script>
 
     </body>
 </html>
