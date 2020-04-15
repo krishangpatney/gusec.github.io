@@ -9,7 +9,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-3">
@@ -30,47 +29,70 @@
 </nav>
 <!-- Content -->
 <div class="container">
-    <body>
-        <div class="container">
-            <div class="row justify-content-md-center">
-                <div class="col "><a href="https://www.facebook.com/GUSecSoc" class="fa fa-facebook"></a></div>
-                <div class="col "><a href="https://twitter.com/gusecurity" class="fa fa-twitter"></a></div>
-                <div class="col "><a href="https://www.linkedin.com/company/glasgow-university-security-society" class="fa fa-linkedin"></a></div>
-                <div class="col "><a href="https://www.instagram.com/gusecurity/" class="fa fa-instagram"></a></div>
-                <!-- Add discord and SCR links -->
+    <div class="row justify-content-center">
+        <div class="col">
+        <center>
+            <div class="slideshow">
+                <img class = "mySlides" src = 'media/GroupPhoto.png'>
+                <img class = "mySlides" src = 'media/GUSECBravo.jpg'>
+                <img class = "mySlides" src = 'media/GUSECAlpha.png'>
+                <br>
             </div>
+        </center>
+            
         </div>
-    </body>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+            <center><a style ="font-size:60px;">About Us</a></center>
+            <hr>
+            <div class="boxed">
+                We are a student society at the University of Glasgow, teaching cyber security and trying<br>
+                to make it more accessible to people who haven't yet set foot within the immense world 
+                of cyber security.
+              </div>
+        </div>
+    </div>
+    <hr>
+</div>
+</body>
 </html>
+
 <style>
-    .container {
-      height: 50em;
-      display: flex;
-      align-items: center;
-      justify-content: center }
-    .fa {
-      padding: 30px;
-      font-size: 30px;
-      width: 60px;
-      text-align: center;
-      text-decoration: none;
-      margin: 5px 2px;
-    }
-    .fa:hover {
-        opacity: 0.7;
-    }
     
-    .fa-facebook {
-      color: black;
-    }  
-    .fa-twitter {
-      color: black;
-    }
-    .fa-linkedin {
-      color: black;
-    }
-    .fa-instagram {
-        color: black;
-    }
-    
+.slideshow{
+    padding: 50px 0px;
+}
+
+.mySlides {
+max-width: 60%;
+height: auto;
+}
+
+/* Coloums */
+* {
+box-sizing: border-box;
+}
+
+.boxed {
+    padding: 20px 50px;
+    text-align: center;
+  }
 </style>
+
+<script>
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 6000); // Change image every 6 seconds
+    }
+</script>
